@@ -12,13 +12,13 @@ Param(
   [string]$tgt="" #target volume list (output of get_san_volumes)
 )
 
-while (($src -eq "") -OR  -not(Test-Path $VolFilePath))
+while (($src -eq "") -OR  -not (Test-Path $src))
 {
 	$src = Read-Host "Enter path to source list"
 	
 }
 
-while (($tgt -eq "") -OR  -not(Test-Path $src2))
+while (($tgt -eq "") -OR  -not (Test-Path $tgt))
 {
 	$tgt = Read-Host "Enter path to target list"
 }
